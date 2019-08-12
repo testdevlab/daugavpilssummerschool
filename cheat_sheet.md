@@ -43,6 +43,8 @@
     </details>
 #### ls
 - `ls` = list elements in current directory
+#### pwd
+- `pwd` = return working directory name (AKA - where I am currently)
 #### cd
 - `cd` = change directory
 - <details>
