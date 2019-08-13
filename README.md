@@ -1,5 +1,4 @@
 # daugavpilssummerschool
 
 #### This is our first project
-* a
-* b
+#### This is Vitalijs's first project####
