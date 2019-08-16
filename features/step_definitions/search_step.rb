@@ -20,7 +20,6 @@ end
 And (/^I add the item to the cart$/) do
 #screen_sizes = Element.get_screen_sizes
 #Element.scroll_down(screen_sizes)
-sleep(0.2)
 Element.click(:xpath, '//*[@text="ADD TO CART"]')
 Element.click(:xpath, '//*[@text="OK"]')
 end
@@ -66,10 +65,10 @@ Element.set(:xpath, '//*[@text="Enter address"]', "Test 8 street")
 Element.set(:xpath, '//*[@text="City"]', "Toronto")
 Element.set(:xpath, '//*[@text="Postal Code"]', "LV-5404")
 Element.set(:xpath, '//*[@text="Mobile number"]', "2#{num}")
-sleep(0.2)
+sleep(0.5) # Need sleep, because sometimes it don't have time to click on "Continue" after puting in number field
 Element.click(:accessibility_id, 'Continue')
 Element.click(:xpath, '//*[@text="ADD TO CART"]')
-sleep(1) # Need sleep, because it need some time to add to cart, reload page and when press next button
+sleep(1.5) # Need sleep, because it need some time to add to cart, reload page and when press next button
 Element.click(:xpath, '//*[@text="BUY IT NOW"]')
 Element.click(:xpath, '//*[@text="REVIEW"]')
 Element.click(:id, 'xo_uxcomp_hub_payment_method')
