@@ -1,0 +1,57 @@
+Test scenario - checking that all offers include searched keywords
+
+Given I have logged/signed in
+When I click on the "Search for anything" field
+And I input "ping pong balls" in the search field (hint - ID of search field changed after clicking)
+Then all offers include searched keywords
+
+(steps that you have to do)
+1. click search field (save how you found it)
+2. input text into the search field (save how you found it)
+3. create xpath that would find each element in the option dropdown
+
+1. Search field: com.ebay.mobile:id/search_box (Click)
+2. Search field: com.ebay.mobile:id/search_src_text (Input: "")
+3.
+//android.widget.ListView/android.widget.RelativeLayout[1]
+//android.widget.ListView/android.widget.RelativeLayout[2]
+OR
+//android.widget.RelativeLayout
+
+
+
+Test scenario - searching for an item
+
+Given I have logged/signed in
+And I click on the "Search for anything" field
+And I search "hockey stick tape" in the search field
+When I choose the first option in the list
+Then this item has the searched keywords in the title
+
+(additional steps that you have to do)
+1. click on the search button after searching for hockey stick tape (save how you found it)
+  //android.widget.ListView/android.widget.RelativeLayout[1]
+2. create xpath that would find only the first item in the presented item list
+//androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]
+
+
+3. find the title of the item that you opened
+id: textview_item_name
+
+Test scenario - adding an item to the cart
+
+Given I have logged/signed in
+And I click on the "Search for anything" field
+And I search "hockey stick tape" in the search field
+And I choose the first option in the list
+And I choose the model and color (or other required categories)
+And I add the item to the cart
+Then I am asked to input my credit card credentials
+
+(additional steps that you have to do)
+1. click on each category and click on some of the given options
+(hint - if needed, try to scroll down in the appium before searching)
+2. click on the button "add to cart"
+id: button_add_to_cart
+3. click "OK" for the "Almost there!" popup
+4. find the title "Provide your contact info"
