@@ -1,0 +1,36 @@
+AUTHORIZATION TEST CASE
+
+register button on home screen
+button_register
+
+simple registration with email button
+button_classic
+
+email field
+//*[@text="Email"]
+
+first name field
+//*[@text="First name"]
+
+last name field
+//*[@text="Last name"]
+
+continue button (click)
+//*[@text="CONTINUE"]
+
+password field
+et_temp
+
+create account button
+bt_create_your_account
+
+fingerprint - maybe later button (NOT APPEARING ON EMULATORS!!)
+bt_maybe_later
+
+VALIDATE THAT LOGGED IN (registered)
+
+home button to open side bar
+home
+
+my account name (to validate)
+textview_sign_in_status

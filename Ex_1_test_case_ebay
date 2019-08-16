@@ -1,0 +1,102 @@
+Test scenario Nr.1
+
+Click on "sign in" on Home page
+com.ebay.mobile:id/button_sign_in
+
+Click on "Use email or username"
+com.ebay.mobile:id/button_classic
+
+Email or username field
+//*[@text="Email or username"]
+
+Password field
+//*[@text="Password"]
+
+Click on button "SIGN IN"
+//*[@text="SIGN IN"]
+
+Click on "Search for anything"
+com.ebay.mobile:id/search_box
+
+Input "ping pong balls"
+com.ebay.mobile:id/search_src_text
+
+Find each element in the option dropdown
+//android.widget.RelativeLayout[position()<=last()]/android.widget.TextView
+
+-------------------------------------------------------------------------
+
+Test scenario Nr.2
+
+Click on "sign in" on Home page
+com.ebay.mobile:id/button_sign_in
+
+Click on "Use email or username"
+com.ebay.mobile:id/button_classic
+
+Email or username field
+//*[@text="Email or username"]
+
+Password field
+//*[@text="Password"]
+
+Click on button "SIGN IN"
+//*[@text="SIGN IN"]
+
+Click on "Search for anything"
+com.ebay.mobile:id/search_box
+
+Input "hockey stick tape"
+com.ebay.mobile:id/search_src_text
+
+Find first element in the option dropdown and choose it
+//android.widget.RelativeLayout[1]/android.widget.TextView
+
+Find the title of the item that you opened
+com.ebay.mobile:id/title
+
+-------------------------------------------------------------------------
+
+Test scenario Nr.3
+
+Click on "sign in" on Home page
+com.ebay.mobile:id/button_sign_in
+
+Click on "Use email or username"
+com.ebay.mobile:id/button_classic
+
+Email or username field
+//*[@text="Email or username"]
+
+Password field
+//*[@text="Password"]
+
+Click on button "SIGN IN"
+//*[@text="SIGN IN"]
+
+Click on "Search for anything"
+com.ebay.mobile:id/search_box
+
+Input "hockey stick tape"
+com.ebay.mobile:id/search_src_text
+
+Find first element in the option dropdown and choose it
+//android.widget.RelativeLayout[1]/android.widget.TextView
+
+Choose third product
+//androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[3]
+
+Choose category "Hockey Tape color"
+//*[@text="Select"]
+
+Choose "Yellow"
+//*[@text="Yellow"]
+
+click on the button "add to cart"
+//*[@text="ADD TO CART"]
+
+click "OK" for the "Almost there!" popup
+//*[@text="OK"]
+
+find the title "Provide your contact info"
+(Accessibility ID) Provide your contact info
