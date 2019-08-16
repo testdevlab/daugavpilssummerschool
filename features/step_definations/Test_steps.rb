@@ -95,10 +95,13 @@ end
   end
 
   Then (/^the correct list of materials are shown$/) do
-#    sleep(3)
-#    Appium::TouchAction.new.swipe(start_x: 1000, start_y: 530, offset_x: 200, offset_y: 530, duration: 300)
-  #action = $driver.touch_actions.swipe(start_x: 200, start_y: 530, offset_x: 1000, offset_y: 530, duration: 300)
-#    action.perform
+  sleep(3)
+  element_list += Element.get(:xpath, '//*[@resource-id="com.ebay.mobile:id/recyclerview_items"]//*[@class="android.widget.TextView"][@content-desc=""]').text
+  action = Appium::TouchAction.new.swipe(start_x: 1000, start_y: 530, end_x: 200, end_y: 530, duration: 3000)
+  action.perform
+  puts element_list
+  sleep(7)
+
   #  sleep(10)
 #  screensizes = Element.get_screen_sizes
 #  Element.scroll_down(screensizes)
