@@ -1,4 +1,4 @@
 # daugavpilssummerschool
 
 #### This is our first project
-#### Owner of this branch: Edgars
+#### Owner of this branch: Janis
