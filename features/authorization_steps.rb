@@ -34,7 +34,6 @@ end
 
 
 When(/^I start registration with an email$/) do
-  sleep(2)
   get_element(:id, 'button_register').click
   get_element(:id, 'button_classic').click
 
