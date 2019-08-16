@@ -23,13 +23,12 @@ Before do
 end
 
 After do |scenario|
-  p scenario.methods
   add_screenshot(scenario.name) if scenario.failed?
   $driver.quit_driver
 end
 
 def add_screenshot(scenario_name)
-  scenarioname.tr!(" ", "")
+  scenario_name.tr!(" ", "")
   local_name = "reports/#{scenario_name}.png"
   $driver.screenshot(local_name)
   embed(local_name, 'image/png', "SCREENSHOT")
