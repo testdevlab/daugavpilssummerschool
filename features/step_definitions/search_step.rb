@@ -12,7 +12,7 @@ end
 
 And (/^I choose the model and quantity$/) do
 Element.click(:id, 'text_slot_1')
-Element.click(:xpath, '//androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]') #Choose this one (picture where are a lot of hockey stick tapes), because it have categories: color, quantity
+Element.click(:xpath, '//androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]')
 Element.click(:id, 'quantity_option_row')
 Element.click(:xpath, '//*[@text="1"]')
 end
