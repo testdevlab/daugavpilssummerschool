@@ -2,11 +2,12 @@ require 'appium_lib'
 require 'faker'
 require 'cucumber'
 
-app_path = "/Users/edgarsavotins/Downloads/ebay_app.apk" # change path to your ebay app
+app_path = "/Users/summerschool/Downloads/ebay_app.apk" # change path to your ebay app
 opts = {
   caps: { # change capabilities to yours
     platformName:  'Android',
-    deviceName:    '98867841334d475732',
+    deviceName:    'emulator-5554',
+    avd:           'Pixel_2_API_26',
     app:           app_path
   },
   appium_lib: {

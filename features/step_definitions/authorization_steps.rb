@@ -34,10 +34,7 @@ And(/^I finish registration$/) do
   # create account button
   Element.click(:id, 'bt_create_your_account')
 
-  # fingerprint - maybe later button (NOT APPEARING ON EMULATORS!!)
-  Element.click(:id, 'bt_maybe_later')
-
-  # click "Accept" button (CHECK IF IT APPEARS FOR YOU)
+  # click "Accept" button
   $driver.alert_accept
 end
 

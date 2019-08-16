@@ -1,6 +1,6 @@
 Feature: search
 
-@test
+@testt
 Scenario Outline: checking that all offers include searched keywords, using variables <input_text> and <user>
   Given I have signed in
   When I click on the "Search for anything" field

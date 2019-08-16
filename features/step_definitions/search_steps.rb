@@ -6,7 +6,7 @@ Given(/^I have signed in$/) do
   step 'I finish registration'
 end
 
-When(/^I click on the "Search for anything" field$/) do
+When(/^12I click on the "Search for anything" field$/) do
   Element.click(:id, 'search_box')
 end
 
