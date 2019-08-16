@@ -3,7 +3,8 @@ When (/^I open all deal section$/) do
 end
 
 Then (/^all the expected categories are visible$/) do
-expected_names = ["FEATURED", "TECH", "FASHION" ,"HOME & GARDEN"]
+expected_names = ["FEATURED", "TECH", "FASHION" ,"HOME & GARDEN"] #All ok
+#expected_names = ["FEATURED", "TECH", "FASHION" ,"AAAAA"] # All ok: find bug "AAAA"
 error_list = []
 tab_name_list = Element.get_list(:xpath, '//*[@resource-id="com.ebay.mobile:id/tabs_toolbar"]//android.widget.TextView')
 counter=0

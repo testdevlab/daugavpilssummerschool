@@ -30,6 +30,23 @@ module Element
   raise "Failed to find element, type: #{type}, value: #{value}"
 end
 
+def self.scroll_down(screen_hash)
+  $driver.swipe(start_x: screen_hash[:middle], start_y: screen_hash[:from], end_x: screen_hash[:middle], end_y: screen_hash[:to], duration: screen_hash[:duration])
+end
+
+def self.get_screen_sizes
+  screen = $driver.screen_size
+  sizes = {
+    width: screen.width,
+    height: screen.height,
+    from: screen.height - (screen.height / 4),
+    to: screen.height / 4,
+    middle: screen.width / 2,
+    duration: 1500
+  }
+  return sizes
+end
+
   def self.click(type, value)
     el = get(type, value)
     el.click
