@@ -42,7 +42,7 @@ Then (/^the title in the top says "Saved" correctly$/) do
   raise error_list.to_s.tr(',',"\n") unless error_list.empty?
   end
 
-
+# I haven't idea how do this step :(
   Then (/^the correct list of materials are shown$/) do
     expected_names = ["Bronze", "Gold", "Lead", "Glass", "Copper", "Iron", "Wood", "Paper", "Stone", "Brass", "Pottery", "Terracota"]
     error_list = []
