@@ -1,3 +1,4 @@
+@special
 Feature: Special deals
 
 Scenario: Validating special deal categories/tabs
