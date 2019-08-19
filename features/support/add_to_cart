@@ -1,0 +1,13 @@
+Feature: Special deals
+
+  @test3
+  Scenario: Adding item to cart
+    Given I have logged/signed in
+    When I click on the "Search for anything" field
+    And I input "white shoes" in the search field
+    And I select white shoes men
+    And I select first item
+    And I click "add to cart"
+    And I select a size
+    And I click add to cart
+    Then should appear a message "Almost there"
