@@ -1,3 +1,9 @@
+Given(/^"(.+)" with "(.+)" and "(.+)" signed in$/) do |user, email, password|
+  step "I start signing in with \"#{user}\""
+  step "I input \"#{email}\", \"#{password}\""
+  step 'I press sign in button'
+end
+
 Given(/^I have clicked on search field$/) do
   step 'I click on the "Search for anything" field'
 end
@@ -15,7 +21,10 @@ end
 
 
 And(/^I open first item from item list$/) do
-  popup_el = Element.get(:xpath, '//*[@resource-id="com.ebay.mobile:id/text_slot_1"]')
+  begin
+    popup_el = Element.get(:xpath, '//*[@resource-id="com.ebay.mobile:id/text_slot_1"]')
+  rescue
+  end
   if popup_el != nil
     Element.click(:xpath, '//*[@resource-id="com.ebay.mobile:id/text_slot_1"]')
   end
@@ -39,18 +48,3 @@ Then(/^This item has the searched keywords in the title$/) do
     puts "Passed"
   end
 end
-
-
-# Then(/^this item has the searched keywords in the title$/) do
-#   puts "item title match with search keywords"
-#   # buybox_fragment_layout - satur title text, cenu, opcijas
-#   # buy it now poga ir sekcija ar id - persistent_buttons_container
-#   # recyclerview_items
-#   # var but ari quantity_layout un variations_layout
-#
-#   # ja variacijas tad vajag lista visus ele ar so celu:
-#   # //android.widget.FrameLayout[@resource-id="com.ebay.mobile:id/variations_layout"]
-#   #   //*[@resource-id="com.ebay.mobile:id/options"]
-#   #     //*[@resource-id="com.ebay.mobile:id/spinner_selection_option"]
-#   # //android.widget.FrameLayout[@resource-id="com.ebay.mobile:id/variations_layout"]//*[@resource-id="com.ebay.mobile:id/options"]//*[@resource-id="com.ebay.mobile:id/spinner_selection_option"]
-# end

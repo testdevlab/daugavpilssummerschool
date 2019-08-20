@@ -1,4 +1,4 @@
-@test_log
+@login
 Feature: Logging in
 
 Scenario Outline:
@@ -8,5 +8,7 @@ Scenario Outline:
   Then I am signed in
 
   Examples:
-  | user |  email                          | password      |
-  |user1 |ashley_heidenreich@kochboyle.name| nWkSuOGdeg261 |
+  |  user  |           email              |   password      |
+  | user1  | annelle.collier@borer.com    | WtOzRzafMh261   |
+  # | user1  |  grigra.lagrigra@yandex.ru   |  grilagri3      |
+  # | user1  |   ashley_heidenreich@kochboyle.name|  nWkSuOGdeg261  |

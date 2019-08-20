@@ -1,6 +1,6 @@
 require 'appium_lib'
 require 'faker'
-require 'capybara/cucumber'
+
 
 app_path = "/Users/summerschool/Downloads/ebay_app.apk" # change path to your ebay app
 opts = {
@@ -8,7 +8,8 @@ opts = {
       "avd" => "Pixel_2_API_27",
       "platformName" => "Android",
       "deviceName" => "some_name",
-      "app" => "/Users/summerschool/Downloads/ebay_app.apk"
+      "app" => "/Users/summerschool/Downloads/ebay_app.apk",
+      "noReset" => true
   },
   appium_lib: {
     server_url: "http://localhost:4750/wd/hub"
@@ -30,7 +31,7 @@ end
 
 def add_screenshot(scenario_name)
   scenario_name.tr!(" ", "_")
-  local_name = "reports/#{scenario_name}.png"
+  local_name = "Reports/#{scenario_name}.png"
   $driver.screenshot(local_name)
   embed(local_name, 'image/png', "SCREENSHOT")
 end
