@@ -14,6 +14,21 @@ module Element
     raise "Failed to find element, type: #{type}, value: #{value}"
   end
 
+  def self.check_if_visible(type, value, timer: 3)
+    start = Time.new
+    while Time.new - start < timer
+      begin
+        el = $driver.find_element(type, value)
+        p "Found, type: #{type}, value: #{value}"
+        return true
+      rescue
+        p "Retrying, type: #{type}, value: #{value}"
+        sleep(0.2)
+      end
+    end
+    return false
+  end
+
   def self.click(type, value)
     el = get(type, value)
     el.click
@@ -41,9 +56,9 @@ module Element
     $driver.hide_keyboard if $driver.is_keyboard_shown
   end
 
-  def self.validate_if_invisible(type, value)
+  def self.validate_if_invisible(type, value, timer: 5)
     start = Time.new
-    while Time.new - start < 5
+    while Time.new - start < timer
       begin
         $driver.find_element(type, value)
         p "Element still visible, type: #{type}, value: #{value}"
@@ -58,8 +73,8 @@ module Element
 
 
   def self.get_screen_sizes
-    #screen = $driver.screen_size #hah no such method you know :@@@@
-    screen = $driver.screen_size
+    #screen = $driver.window_size #hah no such method you know :@@@@
+    screen = $driver.window_size
     sizes = {
       width: screen.width,
       height: screen.height,

@@ -21,11 +21,7 @@ end
 
 
 And(/^I open first item from item list$/) do
-  begin
-    popup_el = Element.get(:xpath, '//*[@resource-id="com.ebay.mobile:id/text_slot_1"]')
-  rescue
-  end
-  if popup_el != nil
+  if Element.check_if_visible(:xpath, '//*[@resource-id="com.ebay.mobile:id/text_slot_1"]')
     Element.click(:xpath, '//*[@resource-id="com.ebay.mobile:id/text_slot_1"]')
   end
   Element.click(:xpath, '//*[@resource-id="com.ebay.mobile:id/cell_collection_item"][1]')
