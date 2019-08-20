@@ -5,9 +5,10 @@ end
 And (/^open "Saved" section/) do
   Element.click(:xpath, '//*[@text="Saved"]')
 end
+#//*[@content-desc="Saved button"]
 
 Then (/^the title in the top says "Saved" correctly/) do
-  title_text = Element.get(:id, '').text
+  title_text = Element.get(:xpath, '//*[@text="Saved"]').text
   if title_text == "Saved"
     puts "Ok"
   else

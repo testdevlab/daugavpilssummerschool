@@ -1,16 +1,15 @@
-
-
-  
-
-
-And (/^I click on the "Search for anything" field$/) do
+And (/^I click on the Search for anything field$/) do
   Element.click(:id, 'search_box')
 end
 
-And(/^I input "(.+)" in the search field$/) do |input_text|
-  @input_text = input_text
-  Element.set(:id, 'search_src_text', @input_text)
+# And(/^I input "(.+)" in the search field$/) do |input_text|
+#   @input_text = input_text
+#   Element.set(:id, 'search_src_text', @input_text)
+# end
+And(/^I input hockey stick in the search field$/) do
+  Element.set(:id, 'search_src_text')
 end
+
 
 
 When (/^I choose the first option in the list$/) do
@@ -18,7 +17,7 @@ When (/^I choose the first option in the list$/) do
   Element.click(:xpath, '//*[@text="hockey stick tape"]')
 end
 
-Then(/^all offers include searched keywords$/) do
+Then(/^this item has the searched keywords in the title$/) do
   error_list = []
   option_list = Element.get_list(:xpath, '//*[@text="hockey stick tape"]')
   option_list.each do |option|

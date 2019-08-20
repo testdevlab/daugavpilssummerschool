@@ -15,12 +15,12 @@ And(/^I input personal data$/) do
 
 
   # first name field
-  name = Faker::Games::Pokemon.name
-  Element.get(:xpath, '//*[@text="First name"]')
+  first_name = Faker::Name.first_name
+  Element.get(:xpath, '//*[@text="First name"]').send_keys(first_name)
 
   # last name field
-  surname = Faker::Games::Pokemon.name
-  Element.get(:xpath, '//*[@text="Last name"]').send_keys(surname)
+  last_name = Faker::Name.last_name
+  Element.get(:xpath, '//*[@text="Last name"]').send_keys(last_name)
   $driver.hide_keyboard
 
 end
@@ -56,13 +56,13 @@ end
 
 Then(/^I have successfully signed up$/) do
   Element.get(:id, 'search_box')
-  validate_if_invisible(:id, 'button_register')
+  Element.validate_if_invisible(:id, 'button_register')
 
   Element.validate_if_invisible(:id, 'button_sign_in')
 
   Element.get(:id, 'home').click
   Element.get(:id, 'menuitem_home')
-  validate_if_invisible(:id, 'textview_sign_out_status')
+  Element.validate_if_invisible(:id, 'textview_sign_out_status')
 end
 
 When(/^I print stuff$/) do
