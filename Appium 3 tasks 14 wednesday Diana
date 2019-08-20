@@ -1,0 +1,39 @@
+1st task
+
+com.ebay.mobile:id/search_box
+"Search for anything1” field(ID)
+
+com.ebay.mobile:id/search_src_text
+"Search for anything" input field(after pressing search for anything1 field button)(ID)
+
+Xpath for elements
+//android.widget.RelativeLayout
+
+2nd task
+
+
+
+//androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]
+first item Xpath
+
+//android.widget.TextView[@content-desc="Black Hockey Tape - 2 Rolls - Low Price - Fast Ship - Hockey Stick Tape"]
+Item name
+
+
+3rd task
+//androidx.recyclerview.widget.RecyclerView
+place with categories
+
+//androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[3]
+choosing one of categories
+
+//android.widget.Button[@content-desc="Add to cart"]
+com.ebay.mobile:id/button_add_to_cart      (ID)
+add to cart button
+
+android:id/button1      (ID)
+pressing ok button
+
+Provide your contact info     (ID)
+//android.webkit.WebView[@content-desc="Provide contact info"]
+text about providing contact info
